@@ -2,10 +2,7 @@
 
 int main() {
     int a, b, c, d, e;
-    float areaTriangulo, areaCirculo;
-    int perimetroRetangulo;
-    const float PI = 3.14;
-
+    
     printf("Digite um valor inteiro para a variavel a: ");
     scanf("%d", &a);
 
@@ -21,14 +18,14 @@ int main() {
     printf("Digite um valor inteiro para a variavel e (raio): ");
     scanf("%d", &e);
 
-    areaTriangulo = (b * c) / 2.0;
-    printf("Area do triangulo: %.2f\n", areaTriangulo);
+    int area = (b * c) / 2;
+    printf("Area do triangulo: %d\n", area);
 
-    perimetroRetangulo = a + b + c + d;
-    printf("Perimetro do retangulo: %d\n", perimetroRetangulo);
+   int perimetro = a + b + c + d;
+    printf("Perimetro do retangulo: %d\n", perimetro);
 
-    areaCirculo = PI * e * e;
-    printf("Area do circulo: %.2f\n", areaCirculo);
+    int circulo = PI * e * e;
+    printf("Area do circulo: %d\n", Circulo);
 
     return 0;
 }
