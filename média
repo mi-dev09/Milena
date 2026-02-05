@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+double mediaPositivos(double *vet, int tam) {
+    double soma = 0;
+    int qt = 0;
+
+    for (double *p = vet; p < vet + tam; p++) { // usando só ponteiros
+        if (*p > 0) {
+            soma += *p;
+            qt++;
+        }
+    }
+
+    if (qt == 0)
+        return 0; // evita divisão por zero
+    
+    return soma / qt;
+}
+
+int main() {
+    int n;
+    printf("Informe o tamanho do array: ");
+    scanf("%d", &n);
+
+    double vet[n];
+
+    for (int i = 0; i < n; i++) {
+        printf("Digite vet[%d]: ", i);
+        scanf("%lf", &vet[i]);
+    }
+
+    double media = mediaPositivos(vet, n);
+    printf("Media dos valores positivos: %.2lf\n", media);
+
+    return 0;
+}
