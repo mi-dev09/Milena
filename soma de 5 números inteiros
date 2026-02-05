@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c, d, e;
+    int soma, produto;
+
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &a);
+
+    printf("Digite o segundo valor: ");
+    scanf("%d", &b);
+
+    printf("Digite o terceiro valor: ");
+    scanf("%d", &c);
+
+    printf("Digite o quarto valor: ");
+    scanf("%d", &d);
+
+    printf("Digite o quinto valor: ");
+    scanf("%d", &e);
+
+    soma = a + b + c + d + e;
+    produto = a * b * c * d * e;
+
+    printf("Soma dos valores: %d\n", soma);
+    printf("Produto dos numeros: %d\n", produto);
+
+    return 0;
+}
