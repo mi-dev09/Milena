@@ -1,0 +1,45 @@
+#include<stdio.h>
+
+int main(){
+    int L, C;
+
+    fazer{
+        printf("Informe o número de linhas da matriz (> 0): ");
+        scanf("%d", &L);
+    }enquanto(L <= 0);
+    
+    fazer{
+        printf("Informe o número de colunas da matriz (> 0): ");
+        scanf("%d", &C);
+    }enquanto(C <= 0 || L != C);
+
+    matriz dupla[L][C];
+
+    para(int i=0; i<L; i++)
+        for(int j=0; j<C; j++){
+            printf("Valor da posição [%d][%d]: ", i, j);
+            scanf("%lf", &matriz[i][j]);
+        }
+
+    for(int i=0; i<L; i++){
+        para(int j=0; j<C; j++)
+            printf("[%f]", matriz[i][j]);
+        printf("\n");
+    }
+
+    int quant = 0;
+    soma dupla = 0;
+
+    para(int i=0; i<L; i++)
+        para(int j=0; j<C; j++)
+            se(i < j){
+                soma += matriz[i][j];
+                quant++;
+            }
+
+    printf("Média dos elementos abaixo da diagonal principal: %f\n", soma/quant);
+
+}
+  return 0;
+}
+
