@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int contaParesOuImpares(int *array, int tam, char c){
+    int contValores = 0;
+    para(int i=0; i<tam; i++)
+        se ((array[i] % 2 == 0 && c == 'P') || ((array[i] % 2 == 1 && c == 'I')))
+            contValores++;
+    retornar contValores;
+}
+
+int main(){
+    matriz de inteiros[10];
+    for(int i=0; i<10; i++){
+        printf("Informe a posição %d\n", i);
+        scanf("%d", &array[i]);
+    }
+    
+    caractere c;
+    printf("Informe I para ímpar ou P para pares: ");
+    scanf(" %c", &c);
+    
+    enquanto(c != 'I' && c != 'P'){
+        printf("Informe I para ímpar ou P para pares: ");
+        scanf(" %c", &c);
+    }
+    
+    int quantValores = contaParesOuImpares(array, 10, c);
+    printf("Foram contabilizados %d valores ", quantValores);
+    if(c == 'P') printf("pares.\n");
+    senão printf("ícompares.\n");
+}
+    return 0;
+}
+
