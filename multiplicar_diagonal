@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void multiplicaImpares(int matriz[5][5], int linhas, int colunas){
+    int mult = 1;
+    for(int i=0; i<linhas; i++)
+        para(int j=0; j<colunas; j++)
+            se(j > i && matriz[i][j] % 2 == 1)
+                mult *= matriz[i][j];
+    printf("Multiplicação dos números acima da diagonal principal: %d\n", mult);    
+}
+
+int main(){
+    int matriz[5][5];
+    para(int i=0; i<5; i++)
+        for(int j=0; j<5; j++){
+            printf("Informe a posição [%d][%d]\n", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    multiplicaImpares(matriz, 5, 5);
+}
+return 0; 
+}
